@@ -1738,7 +1738,8 @@ fig_2.update_traces(
 fig_2.show()
 ```
 
-https://plotly.com/
+![image](https://github.com/DimitriosLavd/Employee-Attrition-Analysis-Insights/assets/157892523/229ae34c-e9fe-45a9-9a35-325f81785046)
+
 
 
 
