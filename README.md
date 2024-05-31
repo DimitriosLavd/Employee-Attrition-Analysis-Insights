@@ -1611,6 +1611,11 @@ sc,sp = stats.spearmanr(df['Average_YearsAtCompany'],df['Income_Variability'])
 print(f"Spearman's correlation: correlation={sc}, pvalue={sp}")
 ```
 
+step 4: Data Aggregation and Transformation:
+
+- The data must be aggregated by 'EducationField' to derive statistics such as mean, median, and income range.
+- A hypothetical 'Income_Stability' index is formulated and calculated.
+
 
 
 
