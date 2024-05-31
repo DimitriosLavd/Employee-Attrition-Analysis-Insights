@@ -1644,21 +1644,52 @@ for i in range(0,len(df_agg['Income_Range'])):
 
 By following the previous steps, we generated the following results: 
 
-JobRole                    Gender
-Healthcare Representative  Female    0.099282
-                           Male      0.048592
-Manager                    Female    0.003966
-                           Male      0.001608
-Manufacturing Director     Female    0.065950
-                           Male      0.000000
-Research Director          Female    0.003074
-                           Male      0.029227
-Research Scientist         Female    0.000000
-Sales Executive            Female    0.058554
-                           Male      0.107350
-Name: Average_MonthlyIncome, dtype: float64
+1️⃣ Coefficient of Variation across Job Roles and Gender.This metric highlights the relative variability of Average_MonthlyIncome across different job roles and genders:
 
+Healthcare Representative:
+Female: 9.93%
+Male: 4.86%
 
+Manager:
+Female: 0.40%
+Male: 0.16%
+
+Manufacturing Director:
+Female: 6.60%
+Male: 0.00%
+
+Research Director:
+Female: 0.31%
+Male: 2.92%
+
+Research Scientist:
+Female: 0.00%
+
+Sales Executive:
+Female: 5.86%
+Male: 10.74%
+
+2️⃣ T-test Results for Gender-wise Average Monthly Income:
+T-statistic: -0.137
+P-value: 0.892
+Interpratation: The p-value is significantly higher than the usual alpha level (e.g., 0.05). This suggests that there's no statistically significant difference in the Average_MonthlyIncome between males and females.
+
+3️⃣ Spearman Correlation between Years at Company and Income Variability:
+Correlation Coefficient: 0.704
+P-value: 3.47 x 10⁻⁸
+Interpretation: With a strong positive correlation of 0.704 and a very low p-value, there's a significant association between Average_YearsAtCompany and Income_Variability. This indicates that as the average years at the company increase, income variability also tends to increase.
+
+4️⃣ Aggregated Statistics by Education Field:
+Dive into the metrics derived for various education fields:
+
+|FIELD1|EducationField|Mean_Income      |Median_Income|Income_Range          |Income_Stability|
+|------|--------------|-----------------|-------------|----------------------|----------------|
+|0     |Human Resources|3441.0           |3441.0       |0.0                   |1.0             |
+|1     |Life Sciences |8068.652433544805|7212.248717948718|15023.472222222223    |6.656250866699331e-05|
+|2     |Marketing     |4812.543452380953|4714.628571428571|4734.416666666668     |0.0002112192631968035|
+|3     |Medical       |7969.295772098559|6495.9958333333325|14890.54545454546     |6.715670712349506e-05|
+|4     |Other         |4333.284090909091|3830.0       |2510.3977272727275    |0.00039834325419278906|
+|5     |Technical Degree|5270.105390641104|3117.111111111111|6511.452380952378     |0.00015357556832101688|
 
 
 
