@@ -1,5 +1,10 @@
 # Employee Attrition Analysis and Insights (in progress)
 
+## Table of Contents 
+
+- [Project Overview](#project-overview)
+
+
 ### Project Overview 
 
 In this project we perform intricate examination of employee datasets, through nuanced SQL querying and sophisticated Python-driven analytics to decipher underlying patterns and emergent insights.Our main objectives are the following:
@@ -1847,6 +1852,18 @@ These visualization tasks are not mere standalone exercises but interconnected t
 While each visualization answered specific questions, they collectively set the stage for broader dialogues about income disparities, gender equality, and employee career trajectories. It's crucial to harness these insights, ensuring they pave the way for actionable strategies, fostering a more inclusive and balanced organizational culture.
 
 In conclusion, visualizations are a bridge between raw data and actionable insights. By meticulously designing and interpreting these visuals, we empower stakeholders to navigate complex datasets, sparking conversations, and inspiring change.
+
+### Refrences 
+
+1. [Workearly Machine Learning & AI Bootcamp](https://academy.workearly.services/course/machine-learning-and-ai-bootcamp)
+2. [Python](https://www.python.org/)
+3. [Pandas](https://pandas.pydata.org/)
+4. [NymPy](https://numpy.org/)
+5. [Plotly](https://plotly.com/python/)
+6. [Seaborn](https://seaborn.pydata.org/)
+
+
+
 
 
 
