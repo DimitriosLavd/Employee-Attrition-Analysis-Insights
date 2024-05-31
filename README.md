@@ -1590,6 +1590,30 @@ Average_MonthlyIncome_CV = df_filtered.groupby(['JobRole', 'Gender'])['Average_M
 Average_MonthlyIncome_CV
 ```
 
+step 3: Statistical Analysis
+
+- We coduct a hypothesis testing to compare 'Average_MonthlyIncome' between 'Male' and 'Female' groups using Welch's t-test.
+- We carry out a Spearman's rank correlation test between 'Average_YearsAtCompany' and 'Income_Variability'.
+
+```python
+
+"""We perform t - test between Male and Female 'Average_MonthlyIncome' for the df"""
+#We create the two arrays 
+Male_MonthlyIncome = df.loc[df['Gender'] == 'Male']['Average_MonthlyIncome']
+Female_MonthlyIncome = df.loc[df['Gender'] == 'Female']['Average_MonthlyIncome']
+
+#Then, we perform the analysis
+st,p = stats.ttest_ind(Male_MonthlyIncome, Female_MonthlyIncome, equal_var = False)
+print(f"T-test results: statistic={st}, pvalue={p}")
+
+"""Spearman rank correlation 'Average_YearsAtCompany' and 'Income_Variability"""
+sc,sp = stats.spearmanr(df['Average_YearsAtCompany'],df['Income_Variability'])
+print(f"Spearman's correlation: correlation={sc}, pvalue={sp}")
+```
+
+
+
+
 
 
 
