@@ -12,7 +12,7 @@
 - [Task 6 - Analyzing Monthly Income by Job Role & Education](#task-6---analyzing-monthly-income-by-Job-Role-&-education)
 - [Task 7 - Visualizing Monthly Income Distribution by Gender](#task-7---visualizing-monthly-income-distribution-by-gender)
 - [Task 8 - Exploring the Relationship between Monthly Income and Tenure by Gender](#task-8---exploring-the-relationship-between-monthly-income-and-tenure-by-gender)
-- [Comclusion](#conclusion)
+- [Conclusion](#conclusion)
 - [Refrences](#refrences)
 
 
