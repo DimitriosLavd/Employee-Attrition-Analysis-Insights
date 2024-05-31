@@ -1626,6 +1626,7 @@ income_mean = df.groupby(['EducationField'],as_index = False)['Average_MonthlyIn
 income_median = df.groupby(['EducationField'],as_index = False)['Average_MonthlyIncome'].median()
 income_max = df.groupby(['EducationField'],as_index = False)['Average_MonthlyIncome'].max()
 income_min = df.groupby(['EducationField'],as_index = False)['Average_MonthlyIncome'].min()
+
 df_agg = pd.DataFrame()
 df_agg['EducationField'] = income_mean['EducationField']
 df_agg['Mean_Income'] = income_mean['Average_MonthlyIncome']
@@ -1640,6 +1641,22 @@ for i in range(0,len(df_agg['Income_Range'])):
     else:
         df_agg['Income_Stability'][i] = 1/df_agg['Income_Range'][i]
 ```
+
+By following the previous steps, we generated the following results: 
+
+JobRole                    Gender
+Healthcare Representative  Female    0.099282
+                           Male      0.048592
+Manager                    Female    0.003966
+                           Male      0.001608
+Manufacturing Director     Female    0.065950
+                           Male      0.000000
+Research Director          Female    0.003074
+                           Male      0.029227
+Research Scientist         Female    0.000000
+Sales Executive            Female    0.058554
+                           Male      0.107350
+Name: Average_MonthlyIncome, dtype: float64
 
 
 
