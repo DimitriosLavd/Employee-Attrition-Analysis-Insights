@@ -9,7 +9,7 @@
 - [Task 3 - Comprehensive Data Analysis and Interpretation](#task-3---comprehensive-data-analysis-and-interpretation)
 - [Task 4 - Visual Analysis of Monthly Incomes by Gender and Job Role](#task-4---visual-analysis-of-monthly-incomes-by-gender-and-job-role)
 - [Task 5 - Visualizing Average Monthly Income by Job Role](#task-5---visualizing-average-monthly-income-by-job-role)
-- [Task 6 - Analyzing Monthly Income by Job Role & Education](#task-6---analyzing-monthly-income-by-Job-role-&-education)
+- [Task 6 - Analyzing Monthly Income by Job Role and Education](#task-6---analyzing-monthly-income-by-Job-role-and-education)
 - [Task 7 - Visualizing Monthly Income Distribution by Gender](#task-7---visualizing-monthly-income-distribution-by-gender)
 - [Task 8 - Exploring the Relationship between Monthly Income and Tenure by Gender](#task-8---exploring-the-relationship-between-monthly-income-and-tenure-by-gender)
 - [Conclusion](#conclusion)
@@ -1757,7 +1757,7 @@ fig_2.show()
 
 ![image](https://github.com/DimitriosLavd/Employee-Attrition-Analysis-Insights/assets/157892523/229ae34c-e9fe-45a9-9a35-325f81785046)
 
-### Task 6 - Analyzing Monthly Income by Job Role & Education
+### Task 6 - Analyzing Monthly Income by Job Role and Education
 
 Objective: The main goal of this task is to visualize the interplay between 'JobRole', 'EducationField', and 'Average_MonthlyIncome'. The resulting line chart will enable a viewer to discern the average monthly income for various job roles and understand how this varies based on one's educational background. We created the releavant graph using the following code: 
 
