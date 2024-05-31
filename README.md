@@ -1561,11 +1561,10 @@ import matplotlib.ticker as tick
 from scipy.stats import variation
 from scipy import stats
 
-""" import the dataset and create the core dataset"""
-
+""" we import the dataset and create the core dataset"""
 df = pd.read_csv("D:\data analysis_2\Case Studies\Employee Attrition Analysis & Insights\samples.csv")
-"""Create the 'Income_Variability' column"""
 
+"""we reate the 'Income_Variability' column"""
 df['Income_Variability'] = df['Max_MonthlyIncome'] - df['Min_MonthlyIncome']
 ```
 
