@@ -1568,6 +1568,29 @@ df = pd.read_csv("D:\data analysis_2\Case Studies\Employee Attrition Analysis & 
 df['Income_Variability'] = df['Max_MonthlyIncome'] - df['Min_MonthlyIncome']
 ```
 
+Step 2: Advanced Filtering and Computation
+
+- Groups in which the 'Average_YearsAtCompany' is above the overall median is filtered.
+- For the selected groups, the coefficient of variation for 'Average_MonthlyIncome' is calculated.
+
+The python script is the following: 
+
+``` python
+
+""" we select groups where the 'Average_YearsAtCompany' are more than the overall median"""
+Median_Average_YearsAtCompany = np.median(df.Average_YearsAtCompany)
+df_filtered = df.loc[df['Average_YearsAtCompany'] > Median_Average_YearsAtCompany]
+df_filtered = df_filtered.reset_index(drop = True)
+
+""" we calculate the'Average_MonthlyIncome' coefficient of variation for the df_filtered"""
+def cv(data):
+    return np.std(data) / np.mean(data)
+
+Average_MonthlyIncome_CV = df_filtered.groupby(['JobRole', 'Gender'])['Average_MonthlyIncome'].apply(cv)
+Average_MonthlyIncome_CV
+```
+
+
 
 
 
