@@ -1616,6 +1616,32 @@ step 4: Data Aggregation and Transformation:
 - The data must be aggregated by 'EducationField' to derive statistics such as mean, median, and income range.
 - A hypothetical 'Income_Stability' index is formulated and calculated.
 
+We have the following python code: 
+
+```python
+""" Data Aggregation and Transformation"""
+#The data must be aggregated by 'EducationField' to derive statistics such as mean, median, and income range.
+#We create the aggregated dataframe (df_agg)
+income_mean = df.groupby(['EducationField'],as_index = False)['Average_MonthlyIncome'].mean()
+income_median = df.groupby(['EducationField'],as_index = False)['Average_MonthlyIncome'].median()
+income_max = df.groupby(['EducationField'],as_index = False)['Average_MonthlyIncome'].max()
+income_min = df.groupby(['EducationField'],as_index = False)['Average_MonthlyIncome'].min()
+df_agg = pd.DataFrame()
+df_agg['EducationField'] = income_mean['EducationField']
+df_agg['Mean_Income'] = income_mean['Average_MonthlyIncome']
+df_agg['Median_Income'] = income_median['Average_MonthlyIncome']
+df_agg['Income_Range'] = income_max['Average_MonthlyIncome'] - income_min['Average_MonthlyIncome']
+df_agg['Income_Stability'] = [1,1,1,1,1,1]
+
+#Hypothetical income stability formula
+for i in range(0,len(df_agg['Income_Range'])):
+    if df_agg['Income_Range'][i] == 0:
+        df_agg['Income_Stability'][i] = 1
+    else:
+        df_agg['Income_Stability'][i] = 1/df_agg['Income_Range'][i]
+```
+
+
 
 
 
