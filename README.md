@@ -3,6 +3,18 @@
 ## Table of Contents 
 
 - [Project Overview](#project-overview)
+- [Data Sources](#data-sources)
+- [Tools](#tools)
+- [Task 1 and 2 - SQL query and Data Extraction](#task-1-and 2---SQL-query-and-data-extraction)
+- [Task 3 - Comprehensive Data Analysis and Interpretation](#task-3---comprehensive-data-analysis-and-interpretation)
+- [Task 4 - Visual Analysis of Monthly Incomes by Gender and Job Role]
+- [Task 5 - Visualizing Average Monthly Income by Job Role]
+- [Task 6 - Analyzing Monthly Income by Job Role & Education]
+- [Task 7 - Visualizing Monthly Income Distribution by Gender]
+- [Task 8 - Exploring the Relationship between Monthly Income and Tenure by Gender]
+- [Comclusion]
+- [Refrences] 
+
 
 
 ### Project Overview 
