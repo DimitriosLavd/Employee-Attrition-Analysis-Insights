@@ -1716,6 +1716,8 @@ fig_1 = pv.plot(kind='bar',
                 )
 ```
 
+![image](https://github.com/DimitriosLavd/Employee-Attrition-Analysis-Insights/assets/157892523/42c50575-f286-4491-b7c6-91769648d9db)
+
 
 
 
