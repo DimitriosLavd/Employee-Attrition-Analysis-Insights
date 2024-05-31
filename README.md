@@ -1,4 +1,4 @@
-# Employee Attrition Analysis and Insights (in progress)
+# Employee Attrition Analysis and Insights
 
 ## Table of Contents 
 
