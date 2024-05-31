@@ -19,7 +19,7 @@
 
 ### Project Overview 
 
-In this project we perform intricate examination of employee datasets, through nuanced SQL querying and sophisticated Python-driven analytics to decipher underlying patterns and emergent insights.Our main objectives are the following:
+In this project we perform intricate examination of employee datasets, through nuanced **SQL** querying and sophisticated **Python**-driven analytics to decipher underlying patterns and emergent insights.Our main objectives are the following:
 
 - Extract specific subsets of data using SQL.
 - Implement Python for data computations.
