@@ -1758,6 +1758,43 @@ fig_3 = px.line(df_agg_t6, x="JobRole", y="Average_MonthlyIncome", color='Educat
 
 ![image](https://github.com/DimitriosLavd/Employee-Attrition-Analysis-Insights/assets/157892523/8fe53215-293b-4f3d-a52f-15f3bfa9d351)
 
+### Task 7 - Visualizing Monthly Income Distribution by Gender
+
+Objective: To gain insights into the distribution of average monthly incomes among different genders, this task aims to create an overlaid histogram that distinctly represents the income frequencies for males and females.This task revolves around crafting a comprehensive visualization to decode the intricacies of average monthly incomes across genders. When executed meticulously, it will not only offer a clear visual summary but also instigate informed discussions on potential income disparities. We created the following graph with the code bellow:
+
+```python
+"""Task 7: Visualizing Monthly Income Distribution by Gender"""
+df_task_seven = pd.read_csv("D:\data analysis_2\Case Studies\Employee Attrition Analysis & Insights\samples.csv")
+
+#We segregate the data based on 'Gender' into two separate series for 'Male' and 'Female', focusing on their 'Average_MonthlyIncome'.
+df_AverageIncome_Male = df_task_seven.loc[df_task_seven['Gender'] == 'Male']['Average_MonthlyIncome'].reset_index()
+
+df_AverageIncome_Female = df_task_seven.loc[df_task_seven['Gender'] == 'Female']['Average_MonthlyIncome'].reset_index()
+
+del df_AverageIncome_Male['index']
+del df_AverageIncome_Female['index']
+
+#We create the overying histograms
+plt.hist(df_AverageIncome_Male, bins=30, alpha=0.5, color='blue', label='Male')  # color parameter is used here
+plt.hist(df_AverageIncome_Female, bins=30, alpha=0.5, color='pink', label='Female') 
+#Graph formating
+plt.xlabel('Average Monthly Income')
+plt.ylabel('Frequency')
+plt.title('Distribution of Average Monthly Income by Gender')
+#Graph Formating
+plt.xlabel('Average Monthly Income')
+plt.ylabel('Frequency')
+plt.title('Distribution of Average Monthly Income by Gender')
+plt.legend(title='Gender')
+plt.show()
+```
+
+![image](https://github.com/DimitriosLavd/Employee-Attrition-Analysis-Insights/assets/157892523/09812b5e-5167-4c6d-87d6-74dedb02d445)
+
+
+
+
+
 
 
 
