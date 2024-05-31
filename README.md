@@ -1740,6 +1740,27 @@ fig_2.show()
 
 ![image](https://github.com/DimitriosLavd/Employee-Attrition-Analysis-Insights/assets/157892523/229ae34c-e9fe-45a9-9a35-325f81785046)
 
+### Task 6 - Analyzing Monthly Income by Job Role & Education
+
+Objective: The main goal of this task is to visualize the interplay between 'JobRole', 'EducationField', and 'Average_MonthlyIncome'. The resulting line chart will enable a viewer to discern the average monthly income for various job roles and understand how this varies based on one's educational background. We created the releavant graph using the following code: 
+
+```python
+"""Task 6: Analyzing Monthly Income by Job Role & Education"""
+df_task_six = pd.read_csv("D:\data analysis_2\Case Studies\Employee Attrition Analysis & Insights\samples.csv")
+df_agg_t6 = df_task_six.groupby(['EducationField', 'JobRole'], as_index=False)['Average_MonthlyIncome'].mean()
+#Creating the plot 
+fig_3 = px.line(df_agg_t6, x="JobRole", y="Average_MonthlyIncome", color='EducationField',markers = True,
+                title = 'Average Monthly Income per Job across diffrent Education Fields',
+                labels={'JobRole':'Job Role',
+                        'Average_MonthlyIncome':'Average Monthly Income',
+                        'EducationField':'Education Field'})
+```
+
+![image](https://github.com/DimitriosLavd/Employee-Attrition-Analysis-Insights/assets/157892523/8fe53215-293b-4f3d-a52f-15f3bfa9d351)
+
+
+
+
 
 
 
