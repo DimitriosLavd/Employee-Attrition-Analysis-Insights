@@ -1718,6 +1718,29 @@ fig_1 = pv.plot(kind='bar',
 
 ![image](https://github.com/DimitriosLavd/Employee-Attrition-Analysis-Insights/assets/157892523/99c80ecc-9f43-460a-b799-86cc2d32dd6c)
 
+### Task 5 - Visualizing Average Monthly Income by Job Role
+
+Objective: The purpose of this task is to create an interactive pie chart that represents the average monthly incomes distributed across various job roles. This visual will provide an at-a-glance view of the income distribution among the roles.In essence, this task is about translating raw data on average monthly incomes into a visual narrative. The resulting interactive pie chart should empower viewers to quickly grasp the relative distribution of incomes among different job roles. Proper execution of this task will make complex data more accessible and interpretable. We created the graph using the following code: 
+
+``` python
+""" Visualizing Average Monthly Income by Job Role"""
+df_task_five = pd.read_csv("D:\data analysis_2\Case Studies\Employee Attrition Analysis & Insights\samples.csv")
+df_agg_t5 = df_task_five.groupby(['JobRole'],as_index = False)['Average_MonthlyIncome'].mean()
+
+#At this point, we create the piechart 
+fig_2 = px.pie(df_agg_t5, values='Average_MonthlyIncome',
+               names='JobRole', title="Average Monthly Income per Job Role")
+# Customize the looks of the pie chart
+fig_2.update_traces(
+    textposition='outside',
+    textinfo='percent+label',
+)
+fig_2.show()
+```
+
+https://plotly.com/
+
+
 
 
 
