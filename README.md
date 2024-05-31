@@ -1691,6 +1691,33 @@ Dive into the metrics derived for various education fields:
 |4     |Other         |4333.284090909091|3830.0       |2510.3977272727275    |0.00039834325419278906|
 |5     |Technical Degree|5270.105390641104|3117.111111111111|6511.452380952378     |0.00015357556832101688|
 
+### Task 4 - Visual Analysis of Monthly Incomes by Gender and Job Role
+
+Objective: The objective of this task is to visually represent a comparison of average monthly incomes categorized by gender and job roles. The visual representation should use bar charts, accompanied by additional information such as income variability and average years at the company. We create the graph using the following code:
+
+```python
+"""Visual Analysis of Monthly Incomes by Gender and Job Role"""
+df_task_four = pd.read_csv("D:\data analysis_2\Case Studies\Employee Attrition Analysis & Insights\samples.csv")
+#we restructure the data using a pivot table
+df_task_four['Income_Variability'] = df_task_four['Max_MonthlyIncome'] - df_task_four['Min_MonthlyIncome']
+pv = pd.pivot_table(df_task_four, 
+                    values = 'Average_MonthlyIncome', index=['JobRole'], 
+                    columns = 'Gender')
+pv['Female'][1] = 0
+
+# We also need the income variability and average years at company for each category.
+var = df_task_four.groupby('JobRole')['Income_Variability'].mean()
+avg_years = df_task_four.groupby(['JobRole', 'Gender'])['Average_YearsAtCompany'].mean()
+
+fig_1 = pv.plot(kind='bar',
+                title = 'Comparison of Average Monthly Income by Gender per JobRole',
+                xlabel = 'Job Role',
+                ylabel = 'Average Monthly Income',
+                )
+```
+
+
+
 
 
 
