@@ -20,7 +20,7 @@ Our main data source is the emp_attrition.csv that was provided by the [Machine 
 
 ### Task 1 and 2 - SQL query and Data Extraction
 
-Our initial dataset contains information about 311 employees. You can see our initial dataset below:
+Our initial dataset contains information about 1470 employees. You can see our initial dataset below:
 
 |Age|Attrition|BusinessTravel   |DailyRate|Department            |DistanceFromHome|Education|EducationField  |EmployeeCount|EmployeeNumber|EnvironmentSatisfaction|Gender|HourlyRate|JobInvolvement|JobLevel|JobRole                  |JobSatisfaction|MaritalStatus|MonthlyIncome|MonthlyRate|NumCompaniesWorked|OverTime|PercentSalaryHike|PerformanceRating|RelationshipSatisfaction|StockOptionLevel|TotalWorkingYears|TrainingTimesLastYear|WorkLifeBalance|YearsAtCompany|YearsInCurrentRole|YearsSinceLastPromotion|YearsWithCurrManager|
 |---|---------|-----------------|---------|----------------------|----------------|---------|----------------|-------------|--------------|-----------------------|------|----------|--------------|--------|-------------------------|---------------|-------------|-------------|-----------|------------------|--------|-----------------|-----------------|------------------------|----------------|-----------------|---------------------|---------------|--------------|------------------|-----------------------|--------------------|
@@ -1791,9 +1791,62 @@ plt.show()
 
 ![image](https://github.com/DimitriosLavd/Employee-Attrition-Analysis-Insights/assets/157892523/09812b5e-5167-4c6d-87d6-74dedb02d445)
 
+### Task 8 - Exploring the Relationship between Monthly Income and Tenure by Gender
 
+Objective: The primary intent of this task is to visually explore and showcase the relationship between employees' average monthly incomes and their average tenure at the company. A secondary goal is to discern patterns by gender using an interactive scatter plot adorned with a dark theme.In sum, this task elegantly weaves data visualization with interactivity, offering a comprehensive exploration of monthly incomes and company tenures, segmented by gender. Properly executed, it will serve as an insightful tool, fostering informed dialogues about potential income and tenure trends within the organization.
 
+```python
+"""Task 8: Exploring the Relationship between Monthly Income and Tenure by Gender"""
+df_task_eight = pd.read_csv("D:\data analysis_2\Case Studies\Employee Attrition Analysis & Insights\samples.csv")
+fig_4= px.scatter(df_task_eight,x= 'Average_MonthlyIncome', y= 'Average_YearsAtCompany',color='Gender',
+                 title = 'Average Monthly Income VS Average Years at Company for Male and Female Employees',
+                 labels = {'Average_MonthlyIncome':'Average Monthly Income',
+                          'Average_YearsAtCompany':'Average Years At Company'},
+                 hover_data=['JobRole', 'EducationField'],
+                 color_discrete_map = {"Male": "SkyBlue", "Female": "Pink"})
+fig_4.update_layout(plot_bgcolor='rgba(0, 0, 0, 0)',
+paper_bgcolor='rgba(0, 0, 0, 0)',showlegend=True)
+fig_4.update_xaxes(showgrid=True, gridwidth=1, gridcolor='LightGrey')
+fig_4.update_yaxes(showgrid=True, gridwidth=1, gridcolor='LightGrey')
+fig_4.show()
+```
 
+![image](https://github.com/DimitriosLavd/Employee-Attrition-Analysis-Insights/assets/157892523/24564722-660c-46dc-aab0-f1eda640dcbe)
+
+### Conclusion
+
+🔍 Overview:
+
+Throughout our journey, we delved deep into various visualization tasks, each distinct in its approach and objective. These tasks allowed us to effectively harness Python's capabilities, combined with libraries like pandas, plotly.express, and matplotlib, to extract, process, and visually interpret multifaceted datasets.
+
+Key Highlights:
+
+1. Income Disparity Visualization:
+
+ - We embarked on a mission to unravel potential income disparities across different job roles. Through a pie chart, we uncovered the average monthly income for each role, offering stakeholders a clear 
+   picture of the financial landscape within the organization.
+
+2. Tenure and Income Analysis:
+
+- Shifting our lens towards educational backgrounds, we painted a vibrant line chart. It juxtaposed job roles and average monthly incomes, further segmented by education fields. This meticulous breakdown 
+  illuminated the influence of educational backgrounds on income levels within job roles.
+3. Income Distribution by Gender:
+
+- With gender equality being a central theme, we designed histograms to delve into the average monthly income distribution between males and females. This task accentuated the importance of assessing and 
+  rectifying potential gender-based income imbalances.
+  
+4. Relationship Mapping:
+
+ - Our final visualization was a dark-themed scatter plot, which aesthetically showcased the correlation between employees' monthly incomes and their tenure at the company. This dynamic visual emphasized 
+   the intricate interplay of income, years spent at the company, and gender.
+
+🌟 Final Thoughts:
+
+These visualization tasks are not mere standalone exercises but interconnected threads weaving a comprehensive narrative. When taken collectively, they provide holistic insights into the organization's financial dynamics, employee demographics, and potential areas of focus. They underscore the power of data visualization in catalyzing informed discussions and decision-making.
+
+While each visualization answered specific questions, they collectively set the stage for broader dialogues about income disparities, gender equality, and employee career trajectories. It's crucial to harness these insights, ensuring they pave the way for actionable strategies, fostering a more inclusive and balanced organizational culture.
+
+In conclusion, visualizations are a bridge between raw data and actionable insights. By meticulously designing and interpreting these visuals, we empower stakeholders to navigate complex datasets, sparking conversations, and inspiring change.
 
 
 
