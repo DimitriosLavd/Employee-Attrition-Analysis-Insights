@@ -1538,6 +1538,37 @@ WHERE
   Employee_Count >5
 ```
 
+### Task 3 - Comprehensive Data Analysis and Interpretation
+
+At this point, we had produced the final dataset, and we stored as 'sample.csv'. The required script we have to concoct involves importing required data science libraries and performing a multi-step analysis on a dataset, specifically focusing on income and tenure-related insights. The aim is to ensure data integrity, carry out statistical analysis, and aggregate data to derive meaningful interpretations.
+
+Step 1: Data Loading and Preprocessing:
+
+- The script begin by importing necessary Python libraries.
+- The dataset, named 'sample.csv', is read into a Pandas DataFrame.
+- A new column, 'Income_Variability', is  created to capture the difference between the maximum and minimum incomes.
+
+The python script is the following: 
+
+```python
+""" Import the necessary libraries"""
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt  
+import seaborn as sns
+import plotly.express as px 
+import matplotlib.ticker as tick
+from scipy.stats import variation
+from scipy import stats
+
+""" import the dataset and create the core dataset"""
+
+df = pd.read_csv("D:\data analysis_2\Case Studies\Employee Attrition Analysis & Insights\samples.csv")
+"""Create the 'Income_Variability' column"""
+
+df['Income_Variability'] = df['Max_MonthlyIncome'] - df['Min_MonthlyIncome']
+```
+
 
 
 
