@@ -1505,6 +1505,38 @@ We wannt to extract insights about employees with moderate to low job satisfacti
 - Average_YearsAtCompany: Average number of years these employees have been with the company.
 - Employee_Count: The number of employees in each grouped category.
 
+We also considered the following conditions:
+
+- The query focuses only on employees who have a job satisfaction level of 3 or less.
+- Grouping is done based on the combination of JobRole, Gender, and EducationField.
+- Only groups with more than 5 employees (Employee_Count > 5) are considered in the result.
+
+We extracted the specific subset, using the following SQL Query: 
+
+``` sql
+SELECT
+  *
+FROM (
+  SELECT
+    JobRole,
+    Gender,
+    EducationField,
+    AVG(MonthlyIncome) AS Average_MonthlyIncome,
+    MAX(MonthlyIncome) AS Max_MonthlyIncome,
+    MIN(MonthlyIncome) AS Min_MonthlyIncome,
+    AVG(YearsAtCompany) AS Average_YearsAtCompany,
+    COUNT(*) AS Employee_Count
+  FROM
+    `attrition.information`
+  WHERE
+    JobSatisfaction <= 3
+  GROUP BY
+    JobRole,
+    Gender,
+    EducationField)
+WHERE
+  Employee_Count >5
+```
 
 
 
